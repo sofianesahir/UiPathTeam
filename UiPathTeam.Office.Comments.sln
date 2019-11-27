@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UiPathTeam.Office.Comments", "UiPathTeam.Office.Comments", "{49EE8EE1-CA3E-4034-8FB1-1B64AF4D6850}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UiPathTeam.Office.Comments", "UiPathTeam.Office.Comments\UiPathTeam.Office.Comments\UiPathTeam.Office.Comments.csproj", "{AAC69FE3-0AF3-4342-9FA5-041A6CD54863}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UiPathTeam.Office.Comments.Activities", "UiPathTeam.Office.Comments\UiPathTeam.Office.Comments.Activities\UiPathTeam.Office.Comments.Activities.csproj", "{8C49B851-B423-41C4-905E-33B779B8A61E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UiPathTeam.Office.Comments.Activities.Design", "UiPathTeam.Office.Comments\UiPathTeam.Office.Comments.Activities.Design\UiPathTeam.Office.Comments.Activities.Design.csproj", "{77EEBC92-F3A0-410D-9F29-CF271454477E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{D8CCFF05-2691-4C3E-A7B5-392DD71438C1}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UiPath.Shared.Activities", "Shared\UiPath.Shared.Activities\UiPath.Shared.Activities.shproj", "{4546856D-EA50-45C6-9419-EEEACB5A80AA}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UiPath.Shared.Activities.Design", "Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.shproj", "{DF9C43F0-ADD3-4FBF-995E-84B92F9CBF25}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Shared\UiPath.Shared.Activities\UiPath.Shared.Activities.projitems*{4546856d-ea50-45c6-9419-eeeacb5a80aa}*SharedItemsImports = 13
+		Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.projitems*{77eebc92-f3a0-410d-9f29-cf271454477e}*SharedItemsImports = 4
+		Shared\UiPath.Shared.Activities\UiPath.Shared.Activities.projitems*{8c49b851-b423-41c4-905e-33b779b8a61e}*SharedItemsImports = 4
+		Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.projitems*{df9c43f0-add3-4fbf-995e-84b92f9cbf25}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAC69FE3-0AF3-4342-9FA5-041A6CD54863}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAC69FE3-0AF3-4342-9FA5-041A6CD54863}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAC69FE3-0AF3-4342-9FA5-041A6CD54863}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAC69FE3-0AF3-4342-9FA5-041A6CD54863}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C49B851-B423-41C4-905E-33B779B8A61E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C49B851-B423-41C4-905E-33B779B8A61E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C49B851-B423-41C4-905E-33B779B8A61E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C49B851-B423-41C4-905E-33B779B8A61E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77EEBC92-F3A0-410D-9F29-CF271454477E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77EEBC92-F3A0-410D-9F29-CF271454477E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77EEBC92-F3A0-410D-9F29-CF271454477E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77EEBC92-F3A0-410D-9F29-CF271454477E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AAC69FE3-0AF3-4342-9FA5-041A6CD54863} = {49EE8EE1-CA3E-4034-8FB1-1B64AF4D6850}
+		{8C49B851-B423-41C4-905E-33B779B8A61E} = {49EE8EE1-CA3E-4034-8FB1-1B64AF4D6850}
+		{77EEBC92-F3A0-410D-9F29-CF271454477E} = {49EE8EE1-CA3E-4034-8FB1-1B64AF4D6850}
+		{4546856D-EA50-45C6-9419-EEEACB5A80AA} = {D8CCFF05-2691-4C3E-A7B5-392DD71438C1}
+		{DF9C43F0-ADD3-4FBF-995E-84B92F9CBF25} = {D8CCFF05-2691-4C3E-A7B5-392DD71438C1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4A90BC48-6649-4AA2-9DB7-76AC006110F3}
+	EndGlobalSection
+EndGlobal
