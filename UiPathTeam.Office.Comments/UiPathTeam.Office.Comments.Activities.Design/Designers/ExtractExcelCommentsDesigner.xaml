@@ -1,5 +1,5 @@
-﻿<sap:ActivityDesigner x:Class="UiPathTeam.Office.Comments.Activities.Design.ExtractWordCommentsDesigner"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+﻿<sap:ActivityDesigner x:Class="UiPathTeam.Office.Comments.Activities.Design.Designers.ExtractExcelCommentsDesigner"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
              xmlns:converters="clr-namespace:UiPath.Shared.Activities.Design.Converters"
@@ -26,9 +26,8 @@
     <controls:ActivityDecoratorControl Style="{StaticResource ActivityDecoratorStyle}">
         <DockPanel LastChildFill="True" Width="300">
             <controls:FilePathControl ModelItem="{Binding ModelItem}" HintText="{x:Static p:Resources.ExtractWordCommentsPathHintText}" DockPanel.Dock="Top" 
-                                     Expression="{Binding Path=ModelItem.FilePath, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In, Mode=TwoWay}" 
-                                     PropertyName="FilePath" Title="{x:Static p:Resources.ExtractWordCommentsPathTitle}" Filter="{x:Static p:Resources.ExtractWordCommentsFilter}"/>
+                                    Expression="{Binding Path=ModelItem.FilePath, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In, Mode=TwoWay}" 
+                                    PropertyName="FilePath" Title="{x:Static p:Resources.ExtractExcelCommentsPathTitle}" Filter="{x:Static p:Resources.ExtractExcelCommentsFilter}"/>
         </DockPanel>
     </controls:ActivityDecoratorControl>
-
 </sap:ActivityDesigner>

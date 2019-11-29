@@ -138,4 +138,23 @@
   <data name="Editing" xml:space="preserve">
     <value>Editing</value>
   </data>
+  <data name="ExtractExcelCommentsFilter" xml:space="preserve">
+    <value>Excel Documents|*.xls;*.xlsx</value>
+  </data>
+  <data name="ExtractExcelCommentsPathTitle" xml:space="preserve">
+    <value>Select an Excel document</value>
+  </data>
+  <data name="ExtractWordCommentsFilter" xml:space="preserve">
+    <value>Word Documents|*.doc;*.docx</value>
+  </data>
+  <data name="ExtractWordCommentsPathHintText" xml:space="preserve">
+    <value>Document path. Text must be quoted</value>
+    <comment>hint</comment>
+  </data>
+  <data name="ExtractWordCommentsPathTitle" xml:space="preserve">
+    <value>Select a Word document</value>
+  </data>
+  <data name="ExtractWordCommentsTitleDescription" xml:space="preserve">
+    <value>title</value>
+  </data>
 </root>

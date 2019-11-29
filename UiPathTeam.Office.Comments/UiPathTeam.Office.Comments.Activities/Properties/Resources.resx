@@ -173,4 +173,60 @@
     <value>SecondNumber</value>
     <comment>property name</comment>
   </data>
+  <data name="ExtractWordCommentsPathHintText" xml:space="preserve">
+    <value>Hint</value>
+    <comment>hint</comment>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Options (Extraction columns)</value>
+    <comment>property group</comment>
+  </data>
+  <data name="ExtractAuthorDescription" xml:space="preserve">
+    <value>Extract comment author. Column name "Author".</value>
+    <comment>description</comment>
+  </data>
+  <data name="ExtractAuthorDisplayName" xml:space="preserve">
+    <value>Extract Author</value>
+    <comment>display name</comment>
+  </data>
+  <data name="ExtractCommentDescription" xml:space="preserve">
+    <value>Extract comment text. Column name "Comment".</value>
+    <comment>description</comment>
+  </data>
+  <data name="ExtractCommentDisplayName" xml:space="preserve">
+    <value>Extract Comment</value>
+    <comment>display name</comment>
+  </data>
+  <data name="ExtractDateDescription" xml:space="preserve">
+    <value>Extract comment date. Column name "Date".</value>
+    <comment>description</comment>
+  </data>
+  <data name="ExtractDateDisplayName" xml:space="preserve">
+    <value>Extract Date</value>
+    <comment>display name</comment>
+  </data>
+  <data name="ExtractScopeDescription" xml:space="preserve">
+    <value>Extract comment scope. This is the text highlighted. Column name "Scope".</value>
+    <comment>description</comment>
+  </data>
+  <data name="ExtractScopeDisplayName" xml:space="preserve">
+    <value>Extract Scope</value>
+    <comment>display name</comment>
+  </data>
+  <data name="FilePathDescription" xml:space="preserve">
+    <value>Document path (String). Text must be quoted.</value>
+    <comment>description</comment>
+  </data>
+  <data name="FilePathDisplayName" xml:space="preserve">
+    <value>Document path &lt;String&gt;</value>
+    <comment>display name</comment>
+  </data>
+  <data name="ResultDescription" xml:space="preserve">
+    <value>Extraction result (DataTable). Based on the Extraction Options selected, the result will have different column number (e.g: To access Comment colomn use Result["Date"]).</value>
+    <comment>description</comment>
+  </data>
+  <data name="ResultDisplayName" xml:space="preserve">
+    <value>Result &lt;DataTable&gt;</value>
+    <comment>display name</comment>
+  </data>
 </root>

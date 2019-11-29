@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,6 +54,9 @@
     <Compile Include="..\UiPathTeam.Office.CommentsAssemblyInfo.cs">
       <Link>Properties\UiPathTeam.Office.CommentsAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Designers\ExtractExcelCommentsDesigner.xaml.cs">
+      <DependentUpon>ExtractExcelCommentsDesigner.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Designers\ExtractWordCommentsDesigner.xaml.cs">
       <DependentUpon>ExtractWordCommentsDesigner.xaml</DependentUpon>
     </Compile>
@@ -71,7 +75,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.jp.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
@@ -80,6 +84,10 @@
       <Link>Themes\Generic.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Designers\ExtractExcelCommentsDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Designers\ExtractWordCommentsDesigner.xaml">
       <SubType>Designer</SubType>
@@ -95,7 +103,11 @@
       <Name>UiPathTeam.Office.Comments.Activities</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Icons\icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
   <Import Project="..\..\Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

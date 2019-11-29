@@ -1,18 +1,14 @@
-﻿using Microsoft.Office.Interop.Word;
+﻿using Microsoft.Office.Interop.Excel;
 using System;
 using System.Activities;
-using System.Collections.Generic;
 using System.Data;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UiPathTeam.Office.Comments.Activities.Properties;
 using DataTable = System.Data.DataTable;
 
-namespace UiPathTeam.Office.Comments.Activities.Word
+namespace UiPathTeam.Office.Comments.Activities.Excel
 {
-    public class ExtractWordComments : CodeActivity
+    public class ExtractExcelComments : CodeActivity
     {
         [LocalizedCategory(nameof(Resources.Input))]
         [LocalizedDescription(nameof(Resources.FilePathDescription))]
@@ -34,11 +30,6 @@ namespace UiPathTeam.Office.Comments.Activities.Word
         [LocalizedDisplayName(nameof(Resources.ExtractCommentDisplayName))]
         public bool ExtractComment { get; set; }
 
-        [LocalizedCategory(nameof(Resources.Options))]
-        [LocalizedDescription(nameof(Resources.ExtractScopeDescription))]
-        [LocalizedDisplayName(nameof(Resources.ExtractScopeDisplayName))]
-        public bool ExtractScope { get; set; }
-
         [LocalizedCategory(nameof(Resources.Output))]
         [LocalizedDescription(nameof(Resources.ResultDescription))]
         [LocalizedDisplayName(nameof(Resources.ResultDisplayName))]
@@ -47,7 +38,9 @@ namespace UiPathTeam.Office.Comments.Activities.Word
         protected override void Execute(CodeActivityContext context)
         {
             Application application = new Application();
-            Document document = application.Documents.Open(Path.GetFullPath(FilePath.Get(context)));
+            Workbook workbook = application.Workbooks.Open(Path.GetFullPath(FilePath.Get(context)));
+            Worksheet worksheet = workbook.Sheets[1];
+
             DataRow row;
 
             DataTable output = new DataTable("output");
@@ -55,33 +48,30 @@ namespace UiPathTeam.Office.Comments.Activities.Word
             DataColumn columnDate = new DataColumn("Date", System.Type.GetType("System.DateTime"));
             DataColumn columnAuthor = new DataColumn("Author", System.Type.GetType("System.String"));
             DataColumn columnComment = new DataColumn("Comment", System.Type.GetType("System.String"));
-            DataColumn columnScope = new DataColumn("Scope", System.Type.GetType("System.String"));
-
 
             if (ExtractDate)
                 output.Columns.Add(columnDate);
             if (ExtractAuthor)
                 output.Columns.Add(columnAuthor);
-            if (ExtractScope)
-                output.Columns.Add(columnScope);
             if (ExtractComment)
                 output.Columns.Add(columnComment);
 
 
-            foreach (Comment comment in document.Comments)
+            foreach (Comment comment in worksheet.Comments)
             {
+
                 row = output.NewRow();
                 if (ExtractDate)
-                    row["Date"] = comment.Date;
+                    row["Date"] = DateTime.Now;
                 if (ExtractAuthor)
                     row["Author"] = comment.Author.ToString();
                 if (ExtractComment)
-                    row["Comment"] = comment.Range.Text;
-                if (ExtractScope)
-                    row["Scope"] = comment.Scope.Text;
+                    row["Comment"] = comment.Text();
+
                 output.Rows.Add(row);
             }
 
+            workbook.Close();
             application.Quit();
             Result.Set(context, output);
 

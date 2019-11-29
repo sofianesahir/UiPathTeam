@@ -58,6 +58,7 @@
     <Compile Include="..\UiPathTeam.Office.CommentsAssemblyInfo.cs">
       <Link>Properties\UiPathTeam.Office.CommentsAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Excel\ExtractExcelComments.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\SharedResources.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -71,7 +72,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.jp.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
@@ -80,9 +81,7 @@
       <Name>UiPathTeam.Office.Comments</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Excel\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

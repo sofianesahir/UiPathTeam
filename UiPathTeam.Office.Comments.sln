@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UiPathTeam.Office.Comments", "UiPathTeam.Office.Comments", "{49EE8EE1-CA3E-4034-8FB1-1B64AF4D6850}"
+	ProjectSection(SolutionItems) = preProject
+		UiPathTeam.Office.Comments\Capture.PNG = UiPathTeam.Office.Comments\Capture.PNG
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UiPathTeam.Office.Comments", "UiPathTeam.Office.Comments\UiPathTeam.Office.Comments\UiPathTeam.Office.Comments.csproj", "{AAC69FE3-0AF3-4342-9FA5-041A6CD54863}"
 EndProject
